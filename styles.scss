@@ -1,0 +1,381 @@
+@import '_generals';
+
+* {
+    margin: $zero-indent;
+    padding: $zero-indent;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: Inter;
+	font-size: $font-size-base;
+}
+
+.container {
+	max-width: 1440px;
+	margin: auto;
+}
+
+// Блок баннера
+.banner {
+	background-color: $background-color-light;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__image {
+		margin: $video-margin;
+		width: 100%;
+		max-width: $max-width-banner;
+		height: 60vh;
+		max-height: $max-height-banner;
+		object-fit: cover;
+	}
+
+	&__button {
+		position: absolute;
+		border: none;
+		padding: $padding-small $padding-large;
+		background-color: $primary-color;
+		clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+		color: $background-color-light;
+		font-weight: $font-weight-medium;
+		cursor: pointer;
+		&:hover {
+			background-color: $hover-color;
+		}
+	}
+
+	&__video {
+		width: $full-width;
+		height: 100%;
+		margin: $video-margin;
+		z-index: 1;
+		display: none;
+		justify-content: center;
+		position: absolute;
+	}
+
+	&__button::after {
+		content: '';
+		width: 0.8rem;
+		height: 0.8rem;
+		display: inline-block;
+		background-image: url('./assets/icons/svgs/Vector.svg');
+		margin-left: 0.7rem;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+	}
+}
+
+// Всплывающее окно формы
+.card-form-overlay {
+	position: fixed;
+	top: $zero-indent;
+	left: $zero-indent;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 9999;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(146, 146, 146, 0.7);
+}
+
+.card-form {
+	background-color: $background-color-light;
+	padding: $padding-small;
+	border-radius: $radius-small;
+	width: 35vw;
+	height: 40vh;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+
+	&__close {
+		position: absolute;
+		top: $padding-small;
+		right: $padding-small;
+		background: none;
+		border: none;
+		font-size: 1.6rem;
+		cursor: pointer;
+	}
+
+	&__title {
+		margin-bottom: $padding-small;
+		text-align: start;
+		font-weight: $font-weight-bold;
+	}
+
+	&__group {
+		margin-bottom: $padding-small;
+		text-align: left;
+
+		& input[type="text"],
+		& input[type="tel"] {
+			width: 100%;
+			padding: 0.5rem;
+			border: 1px solid #E6E6E6;
+			border-radius: $radius-small;
+		}
+	}
+
+	&__group:last-child {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		label {
+			font-size: 0.6rem;
+			display: flex;
+			white-space: nowrap;
+		}
+	}
+
+	&__error-message {
+		color: red;
+		font-size: 0.6rem;
+		display: none;
+	}
+
+	&__input:invalid + .card-form__error-message {
+		display: block;
+	}
+
+	&__submit-button {
+		padding: 0.5rem;
+		border: none;
+		border-radius: $radius-small;
+		background-color: $accent-color;
+		font-size: 1rem;
+		color: $background-color-light;
+		cursor: pointer;
+
+		&:disabled {
+			background-color: #d3d3d3;
+		}
+	}
+
+	&__checkbox {
+		margin-right: 0.5rem;
+	}
+}
+
+.card__container {
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+	background-color: $background-color-dark;
+	padding: 4rem 8rem;
+}
+
+.card {
+	color: $background-color-light;
+	position: relative;
+	overflow: hidden;
+	max-height: 100%;
+	padding: 0.7rem 1rem 1rem 0.5rem;
+	border-radius: $radius-small;
+
+	&:hover {
+		transform: scale(1.02);
+	}
+
+	&__title {
+		font-weight: $font-weight-bold;
+	}
+
+	&__info {
+		display: flex;
+		width: 100%;
+		align-items: end;
+		height: 90%;
+		justify-content: space-between;
+	}
+
+	&__badge-wrapper {
+		font-size: 0.8rem;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		white-space: nowrap;
+		gap: 0.3rem;
+	}
+
+	&__slider {
+		display: none;
+	}
+
+	&__details {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	&--pea {
+		flex: 1 1 25vw;
+		background: url('./assets/icons/горох.jpeg') no-repeat center / cover;
+		.card__info {
+			height: 95%;
+		}
+		.card__daily {
+			background-color: orange;
+		}
+	}
+
+	&--dove {
+		width: 25vw;
+		flex: 1 0 auto;
+		background: url('./assets/icons/голубика.jpeg') no-repeat center / cover;
+		.card__sale {
+			background-color: #FF5BC6;
+		}
+		.card__daily {
+			background-color: #39B0F4;
+		}
+	}
+
+	&--carrot {
+		width: 25vw;
+		flex: 1 0 auto;
+		.card__daily {
+			background-color: #AC59F1;
+		}
+		background: url('./assets/icons/морковка.jpeg') no-repeat center / cover;
+	}
+
+	&--popcorn {
+		.card__content {
+			background: url('./assets/icons/попкорн.jpeg') no-repeat center / cover;
+		}
+		.card__daily {
+			background-color: orange;
+		}
+		.card__status {
+			display: none;
+		}
+	}
+
+	&--icecream {
+		.card__content {
+			background: url('./assets/icons/мороженое.jpeg') no-repeat center / cover;
+		}
+	}
+
+	&__column-layout {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	&--popcorn,
+	&--icecream {
+		flex: 1 1 14.5vw;
+		padding: 0rem;
+		display: flex;
+		flex-direction: column;
+
+		.card__hidden {
+			display: none;
+		}
+
+		.card__title {
+			white-space: normal;
+			height: 30vh;
+		}
+
+		.card__content {
+			padding: 0.7rem;
+			min-height: 50%;
+			flex-grow: 1;
+			display: flex;
+		}
+
+		.card__details {
+			color: #444444;
+			flex-grow: 1;
+			padding: 1rem 0.5rem 1rem 0.5rem;
+			overflow: hidden;
+			background-color: $background-color-light;
+			display: flex;
+			flex-direction: column;
+			font-size: 1rem;
+		}
+
+		.card__price {
+			font-size: 1.5rem;
+			margin-top: auto;
+			flex-shrink: 0;
+			text-align: center;
+		}
+
+		.card__button {
+			margin-top: auto;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		position: absolute;
+		top: 5%;
+		right: 3%;
+		gap: 0.5rem;
+		transition: scale 0.3s ease;
+
+		img:hover {
+			scale: 1.2;
+		}
+	}
+
+	&__sale {
+		background-color: $primary-color;
+		color: $background-color-light;
+		max-width: 70%;
+		padding: 0.3rem;
+		border-radius: 50px;
+	}
+
+	&__daily {
+		background-color: #AC59F1;
+		color: $background-color-light;
+		padding: 0.3rem;
+		border-radius: 50px;
+	}
+
+	&__badge {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $accent-color;
+		border-radius: 50%;
+		width: 2rem;
+		height: 2rem;
+	}
+
+	&__price {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.5rem;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	&__button {
+		border: none;
+		background-color: $primary-color;
+		color: $background-color-light;
+		border-radius: 8px;
+		padding: 0.6rem;
+		font-weight: $font-weight-medium;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $hover-color;
+		}
+	}
+}
+
+

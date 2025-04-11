@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продуктовая страница</title>
+    <link rel="stylesheet" href="./styles.css"> 
+    <link rel="stylesheet" href="./media-queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+
+    <!-- Основной баннер с видео-кнопкой -->
+    <section class="banner">
+        <img src="./assets/icons/конфеты.jpeg" alt="Баннер" class="banner__image">
+        <button class="banner__button">Смотреть видео</button>
+		<div class="banner__video">
+			<iframe width="80%" src="https://www.youtube.com/embed/Zhq_ThHG2gA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>		
+    </section>
+	
+	 <main class="card__container">
+		<div class="card card--pea">
+			<h3 class="card__title">Горох в стручках, 1 кг</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<div class="card__sale">- 29%</div>
+					<p class="card__daily">Товар дня</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">570 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		<div class="card__column-layout">
+		<div class="card card--dove">
+			<h3 class="card__title">Голубика лесная, 200 г</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<div class="card__sale">- 31%</div>
+					<p class="card__daily">Распродажа</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">140 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card card--carrot">
+			<h3 class="card__title">Морковь мытая, 1 кг</h3>
+			<div class="card__actions">
+				<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+				<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+			</div>
+			<div class="card__info">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Хит</p>
+				</div>
+				<div class="card__details">
+					<p class="card__price">140 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+</div>	
+
+<div class="card__slider">
+    <input type="radio" name="slider" id="slide1" class="card__slider-input" checked>
+    <label for="slide1" class="card__slider-button"></label>
+    <input type="radio" name="slider" id="slide2" class="card__slider-input">
+    <label for="slide2" class="card__slider-button"></label>
+  </div>
+
+		<div class="card card--popcorn">
+			<div class="card__content">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Товар дня</p>
+					<p class="card__hidden">Хит</p>
+					<div class="card__sale">- 29%</div>
+				</div>
+				<div class="card__actions">
+					<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+					<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+				</div>
+			</div>
+				<div class="card__details">
+					<h4 class="card__title">Попкорн солёный,для СВЧ-печи, 120 г</h4> 
+					<p class="card__price">160 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		<div class="card card--icecream">
+			<div class="card__content">
+				<div class="card__badge-wrapper">
+					<p class="card__daily">Хит</p>
+				</div>
+				<div class="card__actions">
+					<img src="./assets/icons/svgs/heart.svg" alt="heartLogo">
+					<img src="./assets/icons/svgs/eye.svg" alt="eyeLogo">
+				</div>
+			</div>
+				<div class="card__details">
+					<h4 class="card__title">Эскимо с малиной, 150 г</h4> 
+					<p class="card__price">190 ₽</p>
+					<button class="card__button">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+		
+<!-- Попап -->
+			<div class="card-form-overlay">
+				<div class="card-form">
+					<button class="card-form__close">&times;</button>
+					<h2 class="card-form__title">Оставьте заявку</h2>
+					<form autocomplete="on" class="card-form__form" id="cardForm">
+						<div class="card-form__group">
+							<input type="text" class="card-form__input" id="name" name="name" placeholder="Ваше имя *" required>
+							<span class="card-form__error-message">Поле не заполнено</span>
+						</div>
+						<div class="card-form__group">
+							<input type="tel" class="card-form__input" id="phone" name="phone" placeholder="Номер телефона*" required>
+						</div>
+						<div class="card-form__group">
+							<label class="card-form__label">
+								<input type="checkbox" class="card-form__checkbox" id="consent" name="consent" required>
+								<p>
+									Я соглашаюсь на обработку персональных данных
+								</p>
+							</label>
+							<button type="submit" class="card-form__submit-button">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+    </div>
+	 </main>
+	</div>
+    <script src="/script.js"></script>
+</body>
+</html>
