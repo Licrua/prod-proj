@@ -237,7 +237,6 @@ h4 {
   background-color: #39b0f4;
 }
 .card--dove, .card--carrot {
-  min-width: 387px;
   flex: 1 0 auto;
   min-height: 154px;
 }

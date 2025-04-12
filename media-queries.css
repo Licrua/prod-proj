@@ -66,53 +66,9 @@
     transition: transform 0.5s ease, opacity 0.5s ease;
     max-width: 700px;
   }
-  .card__slider {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-  }
-  .card__slider-input {
-    display: none;
-  }
   .card__column-layout {
     width: 100%;
     align-items: center;
-  }
-  .card__slider-button {
-    width: 1rem;
-    height: 1rem;
-    background-color: #d3d3d3;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .card--popcorn.center {
-    transform: translateX(30%); /* Центрируем карточку попкорна */
-    opacity: 1;
-    z-index: 2;
-  }
-  .card--popcorn.offset {
-    transform: translateX(-70%); /* Смещаем карточку попкорна влево */
-    z-index: 1;
-    opacity: 0.4;
-  }
-  .card--icecream.center {
-    transform: translateX(-40%); /* Центрируем карточку мороженого */
-    z-index: 2;
-    opacity: 1;
-  }
-  .card--icecream.offset {
-    transform: translateX(80%); /* Смещаем карточку мороженого вправо */
-    z-index: 1;
-    opacity: 0.4;
-  }
-  /* Активное состояние */
-  #slide1:checked + .card__slider-button,
-  #slide2:checked + .card__slider-button {
-    background-color: #333;
   }
   .banner {
     height: 30%;
@@ -174,18 +130,6 @@
   .card--dove {
     width: 100%;
   }
-  .card--popcorn {
-    order: 3;
-    flex-basis: 45%;
-    height: 50vh;
-    flex-grow: 1;
-  }
-  .card--icecream {
-    flex-basis: 45%;
-    flex-grow: 1;
-    height: 50vh;
-    order: 4;
-  }
   .card-form__group:last-child {
     gap: 0.3rem;
   }
@@ -209,8 +153,54 @@
     width: 60vw;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .card-form {
     padding: 0.3rem;
+  }
+  .card--popcorn, .card--icecream {
+    width: 230px;
+  }
+  .card__slider-button {
+    width: 1rem;
+    height: 1rem;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .card__slider {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .card__slider-input {
+    display: none;
+  }
+  .card--popcorn.center {
+    transform: translateX(30%); /* Центрируем карточку попкорна */
+    opacity: 1;
+    z-index: 2;
+  }
+  .card--popcorn.offset {
+    transform: translateX(-70%); /* Смещаем карточку попкорна влево */
+    z-index: 1;
+    opacity: 0.4;
+  }
+  .card--icecream.center {
+    transform: translateX(-40%); /* Центрируем карточку мороженого */
+    z-index: 2;
+    opacity: 1;
+  }
+  .card--icecream.offset {
+    transform: translateX(80%); /* Смещаем карточку мороженого вправо */
+    z-index: 1;
+    opacity: 0.4;
+  }
+  #slide1:checked + .card__slider-button,
+  #slide2:checked + .card__slider-button {
+    background-color: #333;
   }
 }/*# sourceMappingURL=media-queries.css.map */
