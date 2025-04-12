@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*:hover {
+  transition: transform 0.3s ease;
+}
 
 body {
   font-family: Inter;

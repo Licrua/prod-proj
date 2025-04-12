@@ -130,13 +130,14 @@
 				<div class="card-form">
 					<button class="card-form__close">&times;</button>
 					<h2 class="card-form__title">Оставьте заявку</h2>
-					<form autocomplete="on" class="card-form__form" id="cardForm">
+					<form autocomplete="on" class="card-form__form" id="form">
 						<div class="card-form__group">
 							<input type="text" class="card-form__input" id="name" name="name" placeholder="Ваше имя *" required>
 							<span class="card-form__error-message">Поле не заполнено</span>
 						</div>
 						<div class="card-form__group">
 							<input type="tel" class="card-form__input" id="phone" name="phone" placeholder="Номер телефона*" required>
+							<span class="card-form__error-message">Поле не заполнено</span>
 						</div>
 						<div class="card-form__group">
 							<label class="card-form__label">
@@ -154,5 +155,7 @@
 	 </main>
 	</div>
     <script src="/script.js"></script>
+	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+	<script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
 </body>
 </html>

@@ -4,12 +4,18 @@
   margin: $zero-indent;
   padding: $zero-indent;
   box-sizing: border-box;
+  
+  &:hover {
+	transition: transform 0.3s ease;
+  }
 }
 
 body {
   font-family: Inter;
   font-size: $font-size-base;
 }
+
+
 
 h3 {
   font-weight: 600;
