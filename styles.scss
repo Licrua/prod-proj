@@ -92,6 +92,11 @@ h4 {
   }
 }
 
+
+.slider__container {
+	display: contents;
+}
+
 // Всплывающее окно формы
 .card-form-overlay {
   position: fixed;
@@ -266,7 +271,7 @@ h4 {
   }
   &--dove,
   &--carrot {
-    // min-width: 387px;
+    min-width: 387px;
     flex: 1 0 auto;
     min-height: 154px;
   }

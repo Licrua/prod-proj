@@ -4,6 +4,11 @@
     max-height: 317px;
   }
 }
+@media (min-width: 1050px) and (max-width: 1250px) {
+  .card__container {
+    padding: 64px 10px;
+  }
+}
 @media (min-width: 1050px) and (max-width: 1380px) {
   .card__details {
     flex-direction: column;
@@ -154,11 +159,18 @@
   }
 }
 @media (max-width: 450px) {
+  .slider__container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .card-form {
     padding: 0.3rem;
   }
   .card--popcorn, .card--icecream {
     width: 230px;
+  }
+  .card--dove, .card--carrot {
+    min-width: 0;
   }
   .card__slider-button {
     width: 1rem;
@@ -171,7 +183,7 @@
   .card__slider {
     display: flex;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
@@ -180,7 +192,7 @@
     display: none;
   }
   .card--popcorn.center {
-    transform: translateX(30%); /* Центрируем карточку попкорна */
+    transform: translateX(45%); /* Центрируем карточку попкорна */
     opacity: 1;
     z-index: 2;
   }
@@ -195,7 +207,7 @@
     opacity: 1;
   }
   .card--icecream.offset {
-    transform: translateX(80%); /* Смещаем карточку мороженого вправо */
+    transform: translateX(50%); /* Смещаем карточку мороженого вправо */
     z-index: 1;
     opacity: 0.4;
   }

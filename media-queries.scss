@@ -9,6 +9,12 @@
   .banner img {
     max-height: 317px;
   }
+};
+
+@media (min-width: 1050px) and (max-width: 1250px) {
+	.card__container {
+		padding: 64px 10px;
+	}
 }
 
 @media (min-width: 1050px) and (max-width: 1380px) {
@@ -19,6 +25,7 @@
 
 @media (min-width: 1024px) and (max-width: 1350px) {
 
+	
   .card--dove,
   .card--carrot {
     width: 100%;
@@ -93,56 +100,7 @@
 	  align-items: center;
 	}
 	
-// 	.card__slider-button {
-// 		width: $padding-large;
-// 		height: $padding-large;
-// 		background-color: #d3d3d3;
-// 		border-radius: 50%;
-// 		cursor: pointer;
-// 		transition: background-color 0.3s;
-// 	}
-	
-// 	.card__slider {
-// 	  display: flex;
-// 	  position: absolute;
-// 	  bottom: 0;
-// 	  gap: $padding-small;
-// 	  justify-content: center;
-// 	  align-items: center;
-// 	}
-  
-// 	.card__slider-input {
-// 	  display: none;
-// 	}
 
-//   .card--popcorn.center {
-//     transform: translateX(30%); /* Центрируем карточку попкорна */
-//     opacity: 1;
-//     z-index: 2;
-//   }
-
-//   .card--popcorn.offset {
-//     transform: translateX(-70%); /* Смещаем карточку попкорна влево */
-//     z-index: 1;
-//     opacity: 0.4;
-//   }
-
-//   .card--icecream.center {
-//     transform: translateX(-40%); /* Центрируем карточку мороженого */
-//     z-index: 2;
-//     opacity: 1;
-//   }
-
-//   .card--icecream.offset {
-//     transform: translateX(80%); /* Смещаем карточку мороженого вправо */
-//     z-index: 1;
-//     opacity: 0.4;
-//   }
-
-//   #slide1:checked + .card__slider-button,
-//   #slide2:checked + .card__slider-button {
-//     background-color: #333;
-//   }
 
   .banner {
     height: 30%;
@@ -209,18 +167,6 @@
     width: 100%;
   }
 
-//   .card--popcorn {
-//     order: 3;
-//     flex-basis: 45%;
-//     height: 50vh;
-//     flex-grow: 1;
-//   }
-//   .card--icecream {
-//     flex-basis: 45%;
-//     flex-grow: 1;
-//     height: 50vh;
-//     order: 4;
-//   }
 
   .card-form__group:last-child {
     gap: 0.3rem;
@@ -249,6 +195,11 @@
 
 @media (max-width: 450px) {
 
+
+	.slider__container {
+		display: flex;
+		flex-wrap: nowrap;
+	}
 	
   .card-form {
     padding: 0.3rem;
@@ -257,6 +208,10 @@
   .card--popcorn, .card--icecream {
 	width: 230px;
   };
+
+  .card--dove, .card--carrot {
+	min-width: 0;
+  }
 
   	.card__slider-button {
 		width: $padding-large;
@@ -270,7 +225,7 @@
 	.card__slider {
 	  display: flex;
 	  position: absolute;
-	  bottom: 0;
+	  bottom: 20px;
 	  gap: $padding-small;
 	  justify-content: center;
 	  align-items: center;
@@ -281,7 +236,7 @@
 	}
 
   .card--popcorn.center {
-    transform: translateX(30%); /* Центрируем карточку попкорна */
+    transform: translateX(45%); /* Центрируем карточку попкорна */
     opacity: 1;
     z-index: 2;
   }
@@ -299,7 +254,7 @@
   }
 
   .card--icecream.offset {
-    transform: translateX(80%); /* Смещаем карточку мороженого вправо */
+    transform: translateX(50%); /* Смещаем карточку мороженого вправо */
     z-index: 1;
     opacity: 0.4;
   }
