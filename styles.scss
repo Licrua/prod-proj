@@ -48,11 +48,9 @@ h4 {
 
   &__image {
     margin: 64px 70px;
-    // padding: 64px 120px;
     width: 100%;
     max-width: 1200px;
     max-height: 517px;
-    // height: 60vh;
     object-fit: cover;
   }
 
@@ -73,8 +71,9 @@ h4 {
   &__video {
     width: $full-width;
     height: 100%;
+	padding: 40px;
     margin: $video-margin;
-    z-index: 1;
+    z-index: 100;
     display: none;
     justify-content: center;
     position: absolute;

@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', hideForm);
 	
 	// видео фрейм
+	
 
 		playButton.addEventListener('click', () => {
 			playButton.style.display = 'none'; 
