@@ -49,6 +49,10 @@
     justify-content: center;
   
   }
+  	.card--dove, .card--carrot {
+		min-width: 310px;
+		flex: 0 0 350px;
+	}
 
   .card__dove {
     padding: $padding-extra;
