@@ -169,11 +169,7 @@
     width: 60vw;
   }
 }
-@media (max-width: 450px) {
-  .slider__container {
-    display: flex;
-    flex-wrap: nowrap;
-  }
+@media (max-width: 750px) {
   .card-form {
     padding: 0.3rem;
   }
