@@ -1,32 +1,33 @@
 @import '_generals';
 
-@media (min-width: 770px) and (max-width: 1350px) {
+/* ---------- LARGE DEVICES ---------- */
 
+/* ---------- 1250px - 1350px ---------- */
+@media (min-width: 1250px) and (max-width: 1350px) {
   .banner img {
-	min-width: 784px;
-	width: 100%;
-	height: 100%;
+    min-width: 784px;
+    width: 100%;
+    height: 100%;
     max-height: 317px;
   }
-
-};
-
-@media (min-width: 1050px) and (max-width: 1250px) {
-	.card__container {
-		padding: 64px 10px;
-	}
 }
 
+/* ---------- 1050px - 1250px ---------- */
+@media (min-width: 1050px) and (max-width: 1250px) {
+  .card__container {
+    padding: 64px 10px;
+  }
+}
+
+/* ---------- 1050px - 1380px ---------- */
 @media (min-width: 1050px) and (max-width: 1380px) {
   .card__details {
     flex-direction: column;
   }
 }
 
+/* ---------- 1024px - 1350px ---------- */
 @media (min-width: 1024px) and (max-width: 1350px) {
-
-
-
   .card--dove,
   .card--carrot {
     width: 100%;
@@ -36,26 +37,23 @@
     flex: 1 0 30vw;
   }
 }
+
+/* ---------- TABLETS: 768px - 1024px ---------- */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .banner {
-    &__image {
-      height: 40vh;
-    }
+  .banner__image {
+    height: 40vh;
   }
 
   .card__column-layout {
     display: flex;
     flex-direction: row;
     justify-content: center;
-  
   }
-  	.card--dove, .card--carrot {
-		min-width: 310px;
-		flex: 0 0 350px;
-	}
 
-  .card__dove {
-    padding: $padding-extra;
+  .card--dove,
+  .card--carrot {
+    min-width: 310px;
+    flex: 0 0 350px;
   }
 
   .card__container {
@@ -67,15 +65,18 @@
     order: -3;
     flex: 0 1 50%;
   }
+
   .card--popcorn {
     order: -2;
 
     .card__sale {
       display: none;
     }
+
     .card__status {
       display: block;
     }
+
     .card__hidden {
       display: inline;
       background-color: #ac59f1;
@@ -83,36 +84,35 @@
       padding: 0.4rem;
       border-radius: 50px;
     }
+
     .card__daily {
       display: none;
     }
   }
+
   .card--icecream {
     order: -1;
   }
 }
 
+/* ---------- MOBILE: max-width: 768px ---------- */
 @media (max-width: 768px) {
-
   .card {
     transition: transform 0.5s ease, opacity 0.5s ease;
-	max-width: 700px;
+    max-width: 700px;
   }
 
-  
   .card__column-layout {
-	  width: 100%;
-	  align-items: center;
-	}
-	
-
+    width: 100%;
+    align-items: center;
+  }
 
   .banner {
     height: 30%;
 
-	&__video {
-	padding: 20px
-	}
+    &__video {
+      padding: 20px;
+    }
   }
 
   .card__container {
@@ -128,22 +128,26 @@
     max-height: 204px;
     margin: 48px 16px;
   }
+
   .card__info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0.5rem;
   }
+
   .card__details {
     margin-top: 10px;
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
+
   .card__badge-wrapper {
     display: flex;
     flex-direction: row;
   }
+
   .card--pea {
     min-height: 328px;
   }
@@ -158,14 +162,16 @@
     .card__content {
       display: flex;
     }
+
     .card__title {
       align-self: flex-start;
     }
+
     .card__details {
       height: 100vh;
     }
+
     .card__badge-wrapper {
-      display: flex;
       flex-direction: column;
     }
   }
@@ -175,96 +181,83 @@
     width: 100%;
   }
 
-
   .card-form__group:last-child {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
     gap: 0.3rem;
+
     label {
       white-space: normal;
     }
+
     button {
       margin-right: 0.3rem;
     }
+
     p {
       margin: 0;
     }
   }
 }
 
-@media (max-width: 1180px) {
-  .card-form {
-    width: 45vw;
-  }
-}
-@media (max-width: 920px) {
-  .card-form {
-    width: 60vw;
-  }
-}
-
+/* ---------- 750px и ниже ---------- */
 @media (max-width: 750px) {
-
-
-	// .slider__container {
-	// 	display: flex;
-	// 	flex-wrap: nowrap;
-	// }
-	
   .card-form {
     padding: 0.3rem;
   }
 
-  .card--popcorn, .card--icecream {
-	width: 230px;
-  };
-
-  .card--dove, .card--carrot {
-	min-width: 0;
+  .card--popcorn,
+  .card--icecream {
+    width: 230px;
   }
 
-  	.card__slider-button {
-		width: $padding-large;
-		height: $padding-large;
-		background-color: #d3d3d3;
-		border-radius: 50%;
-		cursor: pointer;
-		transition: background-color 0.3s;
-	}
-	
-	.card__slider {
-	  display: flex;
-	  position: absolute;
-	  bottom: 20px;
-	  gap: $padding-small;
-	  justify-content: center;
-	  align-items: center;
-	}
-  
-	.card__slider-input {
-	  display: none;
-	}
+  .card--dove,
+  .card--carrot {
+    min-width: 0;
+  }
+
+  .card__slider {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    gap: $padding-small;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__slider-input {
+    display: none;
+  }
+
+  .card__slider-button {
+    width: $padding-large;
+    height: $padding-large;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
 
   .card--popcorn.center {
-    transform: translateX(45%); /* Центрируем карточку попкорна */
+    transform: translateX(45%);
     opacity: 1;
     z-index: 2;
   }
 
   .card--popcorn.offset {
-    transform: translateX(-70%); /* Смещаем карточку попкорна влево */
+    transform: translateX(-70%);
     z-index: 1;
     opacity: 0.4;
   }
 
   .card--icecream.center {
-    transform: translateX(-40%); /* Центрируем карточку мороженого */
+    transform: translateX(-40%);
     z-index: 2;
     opacity: 1;
   }
 
   .card--icecream.offset {
-    transform: translateX(50%); /* Смещаем карточку мороженого вправо */
+    transform: translateX(50%);
     z-index: 1;
     opacity: 0.4;
   }
@@ -275,9 +268,18 @@
   }
 }
 
+/* ---------- max-width: 920px ---------- */
+@media (max-width: 920px) {
+  .card-form {
+    width: 60vw;
+  }
+}
 
+/* ---------- max-width: 1180px ---------- */
+
+/* ---------- max-width: 500px ---------- */
 @media (max-width: 500px) {
-        .card-form {
-			padding: 1rem;
-		}
+  .card-form {
+    padding: 1rem;
+  }
 }
