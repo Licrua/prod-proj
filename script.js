@@ -30,9 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  slide1.addEventListener('change', updateCards);
-  slide2.addEventListener('change', updateCards);
+  slide1?.addEventListener('change', updateCards);
+  slide2?.addEventListener('change', updateCards);
   updateCards();
+
+  cardPopcorn.addEventListener('click', (event) => {
+    if (!event.target.closest('.card__button')) {
+      slide1.checked = true;
+      updateCards();
+    }
+  });
+
+  cardIcecream.addEventListener('click', (event) => {
+    if (!event.target.closest('.card__button')) {
+      slide2.checked = true;
+      updateCards();
+    }
+  });
+
   //  форма
 
   function showForm() {
@@ -60,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
   consentCheckbox.addEventListener('change', function () {
     submitButton.disabled = !this.checked;
   });
-
-
 
   const validate = new JustValidate('#form', {
     errorFieldCssClass: 'is-invalid',
@@ -103,6 +116,5 @@ document.addEventListener('DOMContentLoaded', () => {
   playButton.addEventListener('click', () => {
     playButton.style.display = 'none';
     videoPlayer.style.display = 'flex';
-    videoPlayer.play();
   });
 });
