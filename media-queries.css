@@ -23,6 +23,10 @@
 }
 /* ---------- 1024px - 1350px ---------- */
 @media (min-width: 1024px) and (max-width: 1350px) {
+  .banner__image {
+    width: 75%;
+    min-height: 337px;
+  }
   .card--dove,
   .card--carrot {
     width: 100%;
@@ -43,12 +47,11 @@
   }
   .card--dove,
   .card--carrot {
-    min-width: 310px;
-    flex: 0 0 350px;
+    max-width: 382px;
+    flex: 0 0 382px;
   }
   .card__container {
     flex-wrap: wrap;
-    padding: 2rem;
   }
   .card--pea {
     order: -3;

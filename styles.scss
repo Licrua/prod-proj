@@ -59,7 +59,7 @@ h4 {
   align-items: center;
 
   &__image {
-    margin: 64px 70px;
+    margin: 53px 70px;
     width: 100%;
     max-width: 1200px;
     max-height: 517px;
@@ -67,6 +67,8 @@ h4 {
   }
 
   &__button {
+	min-width: 193px;
+	min-height: 33px;
     position: absolute;
     border: none;
     padding: $padding-small $padding-large;
@@ -217,7 +219,8 @@ h4 {
   gap: 1rem;
   background-color: $background-color-dark;
   //   padding: 4rem 8rem;
-  padding: 64px 0;
+//   padding: 74px 0;
+ padding: 72px 0 72px 27px;
 }
 
 .card {
@@ -336,7 +339,7 @@ h4 {
   &--popcorn,
   &--icecream {
     max-width: 184px;
-    max-height: 328px;
+    max-height: 361px;
     flex: 1 1 14.5vw;
     padding: 0rem;
     display: flex;
@@ -347,12 +350,13 @@ h4 {
     }
 
     .card__title {
+		margin-top: 18px;
       height: 30vh;
     }
 
     .card__content {
       padding: 0.7rem;
-      min-height: 50%;
+      min-height: 53%;
       flex-grow: 1;
       display: flex;
     }

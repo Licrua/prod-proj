@@ -53,7 +53,7 @@ h4 {
   align-items: center;
 }
 .banner__image {
-  margin: 64px 70px;
+  margin: 53px 70px;
   width: 100%;
   max-width: 1200px;
   max-height: 517px;
@@ -61,6 +61,8 @@ h4 {
      object-fit: cover;
 }
 .banner__button {
+  min-width: 193px;
+  min-height: 33px;
   position: absolute;
   border: none;
   padding: 0.5rem 1rem;
@@ -195,7 +197,7 @@ h4 {
   justify-content: center;
   gap: 1rem;
   background-color: #F2F2F2;
-  padding: 64px 0;
+  padding: 72px 0 72px 27px;
 }
 
 .card {
@@ -293,7 +295,7 @@ h4 {
 }
 .card--popcorn, .card--icecream {
   max-width: 184px;
-  max-height: 328px;
+  max-height: 361px;
   flex: 1 1 14.5vw;
   padding: 0rem;
   display: flex;
@@ -303,11 +305,12 @@ h4 {
   display: none;
 }
 .card--popcorn .card__title, .card--icecream .card__title {
+  margin-top: 18px;
   height: 30vh;
 }
 .card--popcorn .card__content, .card--icecream .card__content {
   padding: 0.7rem;
-  min-height: 50%;
+  min-height: 53%;
   flex-grow: 1;
   display: flex;
 }
