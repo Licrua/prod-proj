@@ -80,7 +80,6 @@
   }
   .banner {
     height: 30%;
-    padding: 1rem;
   }
   .banner__video {
     padding: 20px;
@@ -142,6 +141,8 @@
     width: 100%;
   }
   .card-form__group:last-child {
+    display: flex;
+    flex-direction: column;
     gap: 0.3rem;
   }
   .card-form__group:last-child label {
@@ -220,5 +221,10 @@
   #slide1:checked + .card__slider-button,
   #slide2:checked + .card__slider-button {
     background-color: #333;
+  }
+}
+@media (max-width: 500px) {
+  .card-form {
+    padding: 1rem;
   }
 }/*# sourceMappingURL=media-queries.css.map */

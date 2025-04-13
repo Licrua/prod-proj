@@ -8,6 +8,10 @@
   transition: transform 0.3s ease;
 }
 
+input {
+  border: 1px solid #E6E6E6;
+}
+
 body {
   font-family: Inter;
   font-size: 1rem;
@@ -107,12 +111,25 @@ h4 {
   background-color: rgba(146, 146, 146, 0.7);
 }
 
+.just-validate-error-field {
+  border: 2px solid red;
+  outline: none;
+  box-shadow: none;
+}
+
+.just-validate-error-field {
+  border: 2px solid red;
+  transition: border 0.3s ease;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
 .card-form {
   background-color: #fff;
   padding: 0.5rem;
   border-radius: 5px;
-  width: 35vw;
-  height: 40vh;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -138,7 +155,6 @@ h4 {
 .card-form__group input[type=text], .card-form__group input[type=tel] {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #e6e6e6;
   border-radius: 5px;
 }
 .card-form__group:last-child {
@@ -155,9 +171,6 @@ h4 {
   color: red;
   font-size: 0.6rem;
   display: none;
-}
-.card-form__input:invalid + .card-form__error-message {
-  display: block;
 }
 .card-form__submit-button {
   padding: 0.5rem;

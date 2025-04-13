@@ -105,7 +105,6 @@
 
   .banner {
     height: 30%;
-    padding: $padding-large;
 
 	&__video {
 	padding: 20px
@@ -174,6 +173,8 @@
 
 
   .card-form__group:last-child {
+	display: flex;
+	flex-direction: column;
     gap: 0.3rem;
     label {
       white-space: normal;
@@ -268,4 +269,11 @@
   #slide2:checked + .card__slider-button {
     background-color: #333;
   }
+}
+
+
+@media (max-width: 500px) {
+        .card-form {
+			padding: 1rem;
+		}
 }

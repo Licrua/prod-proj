@@ -4,10 +4,15 @@
   margin: $zero-indent;
   padding: $zero-indent;
   box-sizing: border-box;
-  
+
   &:hover {
 	transition: transform 0.3s ease;
   }
+}
+
+
+input {
+  border: 1px solid #E6E6E6;
 }
 
 body {
@@ -116,12 +121,24 @@ h4 {
   background-color: rgba(146, 146, 146, 0.7);
 }
 
+.just-validate-error-field {
+  border: 2px solid red;
+  outline: none;
+  box-shadow: none;
+}
+.just-validate-error-field {
+  border: 2px solid red;
+  transition: border 0.3s ease;
+}
+.is-invalid {
+  border: 1px solid red;
+}
+
+
 .card-form {
   background-color: $background-color-light;
   padding: $padding-small;
   border-radius: $radius-small;
-  width: 35vw;
-  height: 40vh;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -150,7 +167,6 @@ h4 {
     & input[type='tel'] {
       width: 100%;
       padding: 0.5rem;
-      border: 1px solid #e6e6e6;
       border-radius: $radius-small;
     }
   }
@@ -172,9 +188,7 @@ h4 {
     display: none;
   }
 
-  &__input:invalid + .card-form__error-message {
-    display: block;
-  }
+
 
   &__submit-button {
     padding: 0.5rem;

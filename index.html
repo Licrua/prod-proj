@@ -130,14 +130,12 @@
 				<div class="card-form">
 					<button class="card-form__close">&times;</button>
 					<h2 class="card-form__title">Оставьте заявку</h2>
-					<form autocomplete="on" class="card-form__form" id="form">
+					<form action="send.php" method="post" autocomplete="on" class="card-form__form" id="form">
 						<div class="card-form__group">
 							<input type="text" class="card-form__input" id="name" name="name" placeholder="Ваше имя *" required>
-							<span class="card-form__error-message">Поле не заполнено</span>
 						</div>
 						<div class="card-form__group">
-							<input type="tel" class="card-form__input" id="phone" name="phone" placeholder="Номер телефона*" required>
-							<span class="card-form__error-message">Поле не заполнено</span>
+							<input  type="tel" class="card-form__input " id="phone" name="phone" placeholder="Номер телефона*" required>
 						</div>
 						<div class="card-form__group">
 							<label class="card-form__label">

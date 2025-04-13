@@ -7,13 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Переменные для формы
   const formOverlay = document.querySelector('.card-form-overlay');
-  const form = document.getElementById('cardForm');
-  const nameInput = document.getElementById('name');
   const consentCheckbox = document.getElementById('consent');
   const submitButton = document.querySelector('.card-form__submit-button');
   const closeButton = document.querySelector('.card-form__close');
   const cardContainer = document.querySelector('.card__container');
-  const phoneInput = document.getElementById('phone');
 
   // видео переменные
   const playButton = document.querySelector('.banner__button');
@@ -64,42 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.disabled = !this.checked;
   });
 
-  //   form.addEventListener('submit', function (e) {
-  //     e.preventDefault();
 
-  //     let isValid = true;
 
-  //     // Проверка имени
-  //     if (nameInput.value.trim().length < 2) {
-  //       nameInput.classList.add('error');
-  //       isValid = false;
-  //     } else {
-  //       nameInput.classList.remove('error');
-  //     }
-
-  //     const phoneValue = phoneInput.value.trim();
-  //     const phoneDigits = phoneValue.replace(/\D/g, '');
-
-  //     if (phoneDigits.length !== 11) {
-  //       phoneInput.classList.add('error');
-  //       isValid = false;
-  //     } else {
-  //       phoneInput.classList.remove('error');
-  //     }
-
-  //     if (isValid) {
-  //       alert('Форма отправлена!');
-  //       form.reset();
-  //       submitButton.disabled = true;
-  //       hideForm();
-  //     }
-  //   });
-
-  const validate = new window.JustValidate('#form');
+  const validate = new JustValidate('#form', {
+    errorFieldCssClass: 'is-invalid',
+    errorLabelStyle: {
+      paddingLeft: '10px',
+      color: '#E44B4B',
+      fontSize: '8px',
+      marginTop: '5px',
+      fontWeight: '500',
+      lineHeight: '120%',
+    },
+  });
 
   validate
     .addField('#name', [
-      { rule: 'required', errorMessage: 'Введите имя' },
+      { rule: 'required', errorMessage: 'Поле не заполнено' },
       { rule: 'minLength', value: 2, errorMessage: 'Минимум 2 символа' },
     ])
     .addField('#phone', [
@@ -114,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .onSuccess((event) => {
       alert('Форма отправлена!');
       event.target.reset(); // Очищаем форму после успешной отправки
+      submitButton.disabled = true;
+      hideForm();
     });
 
   closeButton.addEventListener('click', hideForm);
